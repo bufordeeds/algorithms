@@ -3,7 +3,7 @@
 const arr = [1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,100,200]
 const ts = 300
 
-const twoSum = (array, targetSum) => {
+const twoNumberSum = (array, targetSum) => {
 
     for (let i = 0; i < array.length; i++){
       for(let j = i + 1; j < array.length; j++)
@@ -35,7 +35,7 @@ const twoSumSquared = (array, targetSum) => {
 
 console.time('algo1')
 for (let i = 1; i < 1000000; i++) {
-    twoSum(arr, ts)
+    twoNumberSum(arr, ts)
 }
 console.timeEnd('algo1')
 console.time('algo2')
