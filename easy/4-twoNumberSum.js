@@ -3,12 +3,12 @@
 const arr = [1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,1,3,11,9,6,100,200]
 const ts = 300
 
-const twoNumberSum = (array, targetSum) => {
+const twoNumberSum = (nums, target) => {
 
-    for (let i = 0; i < array.length; i++){
-      for(let j = i + 1; j < array.length; j++)
-        if( array[i] + array[j] === targetSum) {
-          return [array[i], array[j]]
+    for (let i = 0; i < nums.length; i++){
+      for(let j = i + 1; j < nums.length; j++)
+        if( nums[i] + nums[j] === target) {
+          return [nums[i], nums[j]]
       }
     }
     return 'no values sum up to target sum'
@@ -16,16 +16,16 @@ const twoNumberSum = (array, targetSum) => {
 
 // console.log(twoSum(arr,ts));
 
-const twoSumSquared = (array, targetSum) => {
+const twoSum = (nums, target) => {
   let obj = {}
 
-  for (let i = 0; i < array.length; i++) {
-    if ( obj[array[i]] ) {
-      return [array[i],obj[array[i]]]
+  for (let i = 0; i < nums.length; i++) {
+    if ( obj[nums[i]] ) {
+      return [nums[i],obj[nums[i]]]
     }
     else {
-      let difference = targetSum - array[i]
-      obj[difference] = array[i]
+      let difference = target - nums[i]
+      obj[difference] = nums[i]
     }
   }
   return 'no values sum up to target sum'
